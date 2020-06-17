@@ -11,5 +11,5 @@ func ExampleFib() {
 
 func ExampleFib2() {
 	fmt.Println("Fib2:", Fib2(10))
-	//	Output: Fib2: 89
+	//	Output: Fib2: 81
 }
