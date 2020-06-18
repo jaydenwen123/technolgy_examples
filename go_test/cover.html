@@ -56,6 +56,8 @@
 				
 				<option value="file0">github.com/jaydenwen123/technolgy_examples/go_test/fib.go (100.0%)</option>
 				
+				<option value="file1">github.com/jaydenwen123/technolgy_examples/go_test/str_demo.go (66.7%)</option>
+				
 				</select>
 			</div>
 			<div id="legend">
@@ -96,6 +98,33 @@ func Fib2(n int) int <span class="cov8" title="1">{
         }</span>
         <span class="cov8" title="1">return second</span>
 }
+</pre>
+		
+		<pre class="file" id="file1" style="display: none">package fib
+
+import "time"
+
+//字符串长度
+func strCount(str string) int <span class="cov8" title="1">{
+        var l int
+        l = len([]rune(str))
+        return l
+}</span>
+
+//计算函数
+func algorithm(a int, b int) int <span class="cov0" title="0">{
+        time.Sleep(time.Millisecond * 100)
+        return a + b
+}</span>
+
+type Demo struct {
+}
+
+// 注释
+//        e.g. t.Test1(123)
+func (d *Demo) Test1(v int) int <span class="cov8" title="1">{
+        return v + v
+}</span>
 </pre>
 		
 		</div>
