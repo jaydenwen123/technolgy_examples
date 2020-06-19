@@ -2,3 +2,5 @@
 /go_cross_complie/linux/
 /go_cross_complie/windows/
 /go_cross_complie/go_cross_complie
+go.sum
+
