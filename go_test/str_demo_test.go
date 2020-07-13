@@ -1,11 +1,22 @@
 package fib
 
 import (
+	"flag"
 	"fmt"
 	"testing"
 )
 
+var hello string
+
+func init() {
+	flag.StringVar(&hello, "hello", "123", "hello need input")
+	//不能用parsed，使用parse即可
+	//flag.Parsed()
+	fmt.Println(flag.Parsed())
+}
+
 func Test_strCount(t *testing.T) {
+	t.Log("hello:", hello)
 	type args struct {
 		str string
 	}
@@ -45,14 +56,14 @@ func Benchmark_algorigthm(b *testing.B) {
 	})
 }
 
-func Benchmark_strCount(b *testing.B){
-	s:="阿杜ado"
-	for i:=0;i<25;i++{
-		s = s+s
+func Benchmark_strCount(b *testing.B) {
+	s := "阿杜ado"
+	for i := 0; i < 25; i++ {
+		s = s + s
 	}
 	//b.Logf("len(s) = %d",len(s))
 	b.ResetTimer() //这里将生成字符串的时间去除
-	for i:=0;i<b.N;i++{
+	for i := 0; i < b.N; i++ {
 		strCount(s)
 	}
 }
